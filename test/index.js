@@ -1,21 +1,29 @@
-const chai = require("chai");
-global.expect = chai.expect;
-const isPalindrome = require("../index");
+function isPalindrome(word) {
+  // Write your algorithm here
+  const stringArray = word.split('');
+  const reversedstringArray = stringArray.reverse();
+  const reversedWord = reversedstringArray.join('');
 
-describe("isPalindrome", () => {
-  it("returns true for 'abba'", () => {
-    expect(isPalindrome("abba")).to.be.true;
-  });
-  it("returns true for 'racecar'", () => {
-    expect(isPalindrome("racecar")).to.be.true;
-  });
-  it("returns true for 'a'", () => {
-    expect(isPalindrome("a")).to.be.true;
-  });
-  it("returns false for 'robot'", () => {
-    expect(isPalindrome("robot")).to.be.false;
-  });
-  it("returns false for 'ab'", () => {
-    expect(isPalindrome("ab")).to.be.false;
-  });
-});
+  if (reversedWord === word) {
+    return true;
+
+}else{
+  return false;
+}
+}
+
+/* 
+  Add your pseudocode here
+  create a new function that takes a string and returns  reversed string
+  write a function to reverse the string
+  write conditional statement
+*/
+
+/*
+@@ -21,5 +35,4 @@ if (require.main === module) {
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("robot"));
+}
+
+module.exports = isPalindrome;
+module.exports = isPalindrome;
